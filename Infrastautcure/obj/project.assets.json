@@ -7270,19 +7270,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xps\\.nuget\\packages\\": {}
+    "C:\\Users\\Moussa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xps\\source\\repos\\Products\\Infrastautcure\\Infrastautcure.csproj",
+      "projectUniqueName": "E:\\MVC Task\\Products\\Infrastautcure\\Infrastautcure.csproj",
       "projectName": "Infrastautcure",
-      "projectPath": "C:\\Users\\xps\\source\\repos\\Products\\Infrastautcure\\Infrastautcure.csproj",
-      "packagesPath": "C:\\Users\\xps\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xps\\source\\repos\\Products\\Infrastautcure\\obj\\",
+      "projectPath": "E:\\MVC Task\\Products\\Infrastautcure\\Infrastautcure.csproj",
+      "packagesPath": "C:\\Users\\Moussa\\.nuget\\packages\\",
+      "outputPath": "E:\\MVC Task\\Products\\Infrastautcure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\xps\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Moussa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7296,8 +7301,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\xps\\source\\repos\\Products\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\xps\\source\\repos\\Products\\Core\\Core.csproj"
+            "E:\\MVC Task\\Products\\Core\\Core.csproj": {
+              "projectPath": "E:\\MVC Task\\Products\\Core\\Core.csproj"
             }
           }
         }
@@ -7361,7 +7366,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

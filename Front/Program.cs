@@ -25,6 +25,8 @@ builder.Services.AddDbContext
 builder.Services.AddIdentity<User, IdentityRole>
             ().AddEntityFrameworkStores<DataContext>();
 
+
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = false;
@@ -57,6 +59,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.Run();

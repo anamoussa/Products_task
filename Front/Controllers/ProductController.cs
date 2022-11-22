@@ -2,12 +2,14 @@
 using Core.Interfaces;
 using Front.viewModels;
 using Infrastautcure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 
 namespace Front.Controllers
 {
+    [Authorize(Roles = "Admin,User")]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork<Product> _product;

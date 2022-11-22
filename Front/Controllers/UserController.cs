@@ -15,7 +15,7 @@ namespace Front.Controllers
              SignInManager<User> _SignInManager,
               RoleManager<IdentityRole> _RoleManager)
         {
-            UserManager = userManager;
+           this.UserManager = userManager;
             SignInManager = _SignInManager;
             RoleManager = _RoleManager;
         }
@@ -28,8 +28,6 @@ namespace Front.Controllers
                 .Select(i => new SelectListItem(i.Name, i.Name)).ToList();
             return View();
         }
-
-
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpModel model)
         {
@@ -72,29 +70,42 @@ namespace Front.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SignIn(LoginModel model)
+        public async Task<IActionResult> SignIn (LoginModel model)
         {
             if (!ModelState.IsValid)
+            {
                 return View();
+            }
             else
             {
-               
-
                 var result =
                 await SignInManager.PasswordSignInAsync(model.Email, model.Password,
                         model.RememberMe, true);
-
                 if (result.IsNotAllowed)
                 {
-                    ModelState.AddModelError("", "Invalid User Name Or password");
+                    ModelState.AddModelError(" ", "Invalid Email Name Or password");
                     return View();
+                }
+                if (result.IsLockedOut)
+                {
+                    ModelState.AddModelError(" ", "you accont is locked try after 1 minute");
+                    return View();
+                }
+                if (!result.Succeeded)
+                {
+                    ModelState.AddModelError(" ", "Invalid Email Name Or password");
+                    return View();
+
                 }
                 else
                 {
-
                     return RedirectToAction("Index", "Product");
                 }
             }
+
+
+
+
 
         }
 

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastautcure.Migrations
 {
-    public partial class SeedData : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -216,8 +216,8 @@ namespace Infrastautcure.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "57739e3e-b913-4d2c-82db-7a3f80811627", "0d556ddb-1fef-4514-94ac-58a5ee4ae691", "Admin", "ADMIN" },
-                    { "708e8680-f04a-4721-9328-42affd3de6d1", "d527fb5f-b223-418b-8eac-715e45f69544", "User", "USER" }
+                    { "c71f9b4e-e4ad-4e62-84fc-a57bad19e975", "465896b7-1382-4b49-90fa-0e9c29b1de69", "User", "USER" },
+                    { "d4f311a1-3a8b-478e-a3e7-6c6f209368df", "93cc370e-3bfc-46d7-b92e-509dae0bd4ba", "Admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -225,9 +225,9 @@ namespace Infrastautcure.Migrations
                 columns: new[] { "OrderId", "Date" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2022, 11, 22, 15, 15, 46, 223, DateTimeKind.Local).AddTicks(5227) },
-                    { 2, new DateTime(2022, 11, 22, 15, 15, 46, 223, DateTimeKind.Local).AddTicks(5282) },
-                    { 3, new DateTime(2022, 11, 22, 15, 15, 46, 223, DateTimeKind.Local).AddTicks(5304) }
+                    { 1, new DateTime(2022, 11, 22, 19, 16, 22, 518, DateTimeKind.Local).AddTicks(2049) },
+                    { 2, new DateTime(2022, 11, 22, 19, 16, 22, 518, DateTimeKind.Local).AddTicks(2077) },
+                    { 3, new DateTime(2022, 11, 22, 19, 16, 22, 518, DateTimeKind.Local).AddTicks(2090) }
                 });
 
             migrationBuilder.InsertData(
@@ -248,7 +248,7 @@ namespace Infrastautcure.Migrations
                     { 1, 1, 1 },
                     { 2, 1, 3 },
                     { 3, 2, 1 },
-                    { 4, 2, 2 }
+                    { 4, 3, 2 }
                 });
 
             migrationBuilder.CreateIndex(

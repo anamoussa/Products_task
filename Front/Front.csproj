@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Shared\_card.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Pages\" />
   </ItemGroup>
 
@@ -24,6 +28,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Infrastautcure\Infrastautcure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Shared\_card.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Shared\_card.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\_card.cshtml" />
   </ItemGroup>
 
 </Project>

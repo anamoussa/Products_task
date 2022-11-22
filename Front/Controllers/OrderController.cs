@@ -1,11 +1,14 @@
 ﻿using Core.Entities;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using System.Drawing.Printing;
 using X.PagedList;
 
 namespace Front.Controllers
 {
+    [Authorize(Roles = "Admin,User")]
     public class OrderController : Controller
     {
         private readonly IUnitOfWork<Product> _product;

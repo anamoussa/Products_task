@@ -1,0 +1,50 @@
+﻿@using Infrastautcure
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IEnumerable<Core.Entities.Product>
+@*@model IPagedList<Core.Entities.Product>*@
+
+@{
+    ViewData["Title"] = "Index";
+}
+@section SpecialStyle{
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css">
+    }
+
+    <div style="margin:10px 10px;">
+        <h1>Product List</h1>
+
+      
+        <div class="container-fluid">
+            <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="card col-3" style="width: 13rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4v_MVj4K0NOY5S0XSrbOBit50Zzs9Waf5QGv-Xvr8HQ&s" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Name)</h5>
+
+                        <p class="card-text"> @Html.DisplayFor(modelItem => item.Price)</p>
+                        <p class="card-text"> @Html.DisplayFor(modelItem => item.Qauntity)</p>
+                        <a class="btn btn-primary asp-action="Edit" asp-route-id="@item.ProductId">Add To Orders</a>
+                    </div>
+                </div>
+
+            }
+            </div>
+
+        </div>
+
+
+
+       
+           
+  
+
+
+    <div style="text-align: center;">
+        @Html.PagedListPager((IPagedList)Model,pageIndex => Url.Action("Index", new {pageIndex}))
+
+    </div>
+</div>

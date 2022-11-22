@@ -41,17 +41,17 @@ namespace Infrastautcure.Migrations
                         new
                         {
                             OrderId = 1,
-                            Date = new DateTime(2022, 11, 22, 15, 15, 46, 223, DateTimeKind.Local).AddTicks(5227)
+                            Date = new DateTime(2022, 11, 22, 19, 16, 22, 518, DateTimeKind.Local).AddTicks(2049)
                         },
                         new
                         {
                             OrderId = 2,
-                            Date = new DateTime(2022, 11, 22, 15, 15, 46, 223, DateTimeKind.Local).AddTicks(5282)
+                            Date = new DateTime(2022, 11, 22, 19, 16, 22, 518, DateTimeKind.Local).AddTicks(2077)
                         },
                         new
                         {
                             OrderId = 3,
-                            Date = new DateTime(2022, 11, 22, 15, 15, 46, 223, DateTimeKind.Local).AddTicks(5304)
+                            Date = new DateTime(2022, 11, 22, 19, 16, 22, 518, DateTimeKind.Local).AddTicks(2090)
                         });
                 });
 
@@ -99,7 +99,7 @@ namespace Infrastautcure.Migrations
                         new
                         {
                             Id = 4,
-                            OrderId = 2,
+                            OrderId = 3,
                             ProductId = 2
                         });
                 });
@@ -180,15 +180,15 @@ namespace Infrastautcure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "708e8680-f04a-4721-9328-42affd3de6d1",
-                            ConcurrencyStamp = "d527fb5f-b223-418b-8eac-715e45f69544",
+                            Id = "c71f9b4e-e4ad-4e62-84fc-a57bad19e975",
+                            ConcurrencyStamp = "465896b7-1382-4b49-90fa-0e9c29b1de69",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "57739e3e-b913-4d2c-82db-7a3f80811627",
-                            ConcurrencyStamp = "0d556ddb-1fef-4514-94ac-58a5ee4ae691",
+                            Id = "d4f311a1-3a8b-478e-a3e7-6c6f209368df",
+                            ConcurrencyStamp = "93cc370e-3bfc-46d7-b92e-509dae0bd4ba",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
