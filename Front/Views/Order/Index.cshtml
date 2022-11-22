@@ -1,0 +1,92 @@
+﻿@using Core.Entities
+@using Infrastautcure
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@*@model IEnumerable<Core.Entities.Order>*@
+@*@model List<Order>*@
+@model IPagedList<Order>
+
+
+<html>
+<head>
+    @ViewBag.Title
+    @section SpecialStyle{
+        <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css">
+    }
+    </head>
+    <body>
+        <div style="text-align: center; margin-top:10%;">
+            @* <h1>
+        <a asp-controller="Order" asp-action="Add" class="btn btn-primary">Add</a>
+        </h1>*@
+            <h1>Order List Page </h1>
+            <table class="table">
+                <thead>
+                </thead>
+                <tbody>
+                @foreach (Order b in Model)
+                {
+                    <tr>
+                        <th>
+                            Order ID
+                        </th>
+                        <th>
+                            Order Date
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            @b.OrderId
+                        </td>
+                        <td>
+                            @b.Date
+                        </td>
+                    <tr>
+                        <th>
+                            Product ID
+                        </th>
+                        <th>
+                            Product Name
+                        </th>
+                        <th>
+                            Product Price
+                        </th>
+                        <th>
+                            Product Qauntity
+                        </th>
+                    </tr>
+
+                        @foreach (var c in b.OrderProducts)
+                        {
+
+                        <tr>
+                            <td>
+                                    @c.Product.ProductId
+                            </td>
+                            <td>
+                                    @c.Product.Name
+                            </td>
+                            <td>
+                                    @c.Product.Price
+                            </td>
+                            <td>
+                                    @c.Product.Qauntity
+                            </td>
+                        </tr>
+
+                        }
+                    
+                    </tr>
+                }
+            </tbody>
+            <h5>_____________________</h5>
+        </table>
+
+    </div>
+    <div style="text-align: center;">
+        @Html.PagedListPager((IPagedList)Model,pageIndex => Url.Action("Index", new {pageIndex}))
+
+    </div>
+
+</body>
+</html>

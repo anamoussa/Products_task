@@ -1,0 +1,17 @@
+C:\Users\xps\source\repos\Products\Infrastautcure\bin\Debug\net6.0\Infrastautcure.deps.json
+C:\Users\xps\source\repos\Products\Infrastautcure\bin\Debug\net6.0\Infrastautcure.runtimeconfig.json
+C:\Users\xps\source\repos\Products\Infrastautcure\bin\Debug\net6.0\Infrastautcure.dll
+C:\Users\xps\source\repos\Products\Infrastautcure\bin\Debug\net6.0\Infrastautcure.pdb
+C:\Users\xps\source\repos\Products\Infrastautcure\bin\Debug\net6.0\Core.dll
+C:\Users\xps\source\repos\Products\Infrastautcure\bin\Debug\net6.0\Core.pdb
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.csproj.AssemblyReference.cache
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.AssemblyInfoInputs.cache
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.AssemblyInfo.cs
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.csproj.CoreCompileInputs.cache
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.csproj.CopyComplete
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.dll
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\refint\Infrastautcure.dll
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.pdb
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\Infrastautcure.genruntimeconfig.cache
+C:\Users\xps\source\repos\Products\Infrastautcure\obj\Debug\net6.0\ref\Infrastautcure.dll

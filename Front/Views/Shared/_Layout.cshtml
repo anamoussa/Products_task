@@ -1,0 +1,77 @@
+﻿@using Core.Entities
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager;
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/lib/twitter-bootstrap/css/bootstrap.min.css" />
+    @RenderSection("SpecialStyle",false)
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <header>
+                    <nav class="navbar navbar-expand-lg bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" asp-controller="Home" asp-action="Index">Product System</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Product" asp-action="Index">Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Order" asp-action="Index">Orders</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <span>@User.Identity.Name</span>
+                        <span>|</span>
+                        <a asp-controller="User" asp-action="SignOut">Sign Out</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="User" asp-action="SignUp">Sign Up</a>
+                        <span>|</span>
+                        <a asp-controller="User" asp-action="SignIn">Sign In</a>
+                    }
+                </header>
+                <main>
+                    <div class="row">
+                        <div class="col-2">
+                            @RenderSection("LeftSide",false)
+                        </div>
+                        <div class="col-10">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <div class="text-center">
+                        <h3>Copyright @@ Footer  - @DateTime.Now.Year </h3>
+                    </div>
+                </footer>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+</html>
